@@ -6,7 +6,8 @@ config = {
 	color = 0x000000,
 	miceCollision = false,
 	groundCollision = false,
-	dynamic = true,
+	dynamic = false,
+	linearDamping = 9999,
 	mass = 0
 }
 
@@ -25,8 +26,11 @@ function geometry()
 	end
 end
 
-function eventNewPlayer(p)
-	geometry()
-end
+tfm.exec.addPhysicObject(-2, 400, 200, {type = 12, width = 1600, height = 1600, miceCollision = false, groundCollision = false, color = 0x000000, dynamic = false})
 
 geometry()
+
+ui.setMapName("Aykv")
+tfm.exec.disableAutoNewGame()
+tfm.exec.disableAutoShaman()
+tfm.exec.addPhysicObject(-1, 400, 400, {type = 14, width = 1600, foreground = false, groundCollision = false, friction = 1})
