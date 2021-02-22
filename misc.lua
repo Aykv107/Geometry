@@ -3,12 +3,12 @@ config = {
 	width = 1600,
 	height = 1600,
 	angle = 0,
-	color = 0x000000,
+	mass = 0,
 	miceCollision = false,
 	groundCollision = false,
-	dynamic = false,
 	linearDamping = 9999,
-	mass = 0,
+	dynamic = false,
+	color = 0x000000,
 	p = 75,
 	a = 5
 }
