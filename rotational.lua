@@ -3,8 +3,8 @@ colors = {}
 
 --------------------------
 
-velocity = -0
-velocityProportion = 0.15
+velocity = 0
+velocityProportion = 0.01
 
 --------------------------
 
@@ -20,7 +20,9 @@ for i = 1, 20 do
 end
 
 for i = 1, 21 do
-	colors[i] = color
+	local colorConfig = tostring(color)
+
+	colors[i] = colorConfig
 
 	color = color + colorProportion
 end
