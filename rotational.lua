@@ -34,6 +34,7 @@ function rgb_hex(r, g, b)
 
 	return base16[_r1] ..base16[_r2] .. base16[_g1] .. base16[_g2] .. base16[_b1] .. base16[_b2] 
 end
+
 --------------------------
 
 objType = 12
@@ -50,7 +51,7 @@ jointPos = "400,200"
 --------------------------
 
 velocity = 0
-velocityProportion = 0.1
+velocityProportion = 0.01
 
 --------------------------
 
@@ -58,9 +59,9 @@ r = 0
 g = 0
 b = 0
 
-rp = -255
-gp = -255
-bp = -255
+rp = 8
+gp = 0
+bp = 12
 
 --------------------------
 
