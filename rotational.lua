@@ -60,8 +60,8 @@ jointPos = "400,200"
 
 --------------------------
 
-velocity = 0
-velocityProportion = 0.01
+velocity = -1
+velocityProportion = 0
 
 --------------------------
 
@@ -87,7 +87,7 @@ end
 
 for i = 1, 21 do
 	local filter = colorControl({math.abs(r), math.abs(g), math.abs(b)})
-	colors[i] = rgb_hex(r, g, b)
+	colors[i] = rgb_hex(table.unpack(filter))
 
 	r = r + rp
 	g = g + gp
