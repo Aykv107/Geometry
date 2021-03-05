@@ -35,6 +35,16 @@ function rgb_hex(r, g, b)
 	return base16[_r1] ..base16[_r2] .. base16[_g1] .. base16[_g2] .. base16[_b1] .. base16[_b2] 
 end
 
+function colorControl(colors)
+	for i, color in next, colors do
+		if color > 255 then
+			colors[i] = 255
+		end
+	end
+
+	return colors
+end
+
 --------------------------
 
 objType = 12
@@ -76,11 +86,12 @@ for i = 1, 20 do
 end
 
 for i = 1, 21 do
+	local filter = colorControl({math.abs(r), math.abs(g), math.abs(b)})
 	colors[i] = rgb_hex(r, g, b)
 
-	r = math.abs(r + rp)
-	g = math.abs(g + gp)
-	b = math.abs(b + bp)
+	r = r + rp
+	g = g + gp
+	b = b + bp
 end
 
 for i = 1, 21 do
